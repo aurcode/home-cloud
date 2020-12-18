@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc --project .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged",
     "lint": "eslint '*/**/*.{js,ts}' --quiet --fix"
