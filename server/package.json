@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --project .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/*",
+    "build": "tsc --project ./src/.",
     "precommit": "lint-staged",
     "lint": "eslint '*/**/*.{js,ts}' --quiet --fix"
   },
@@ -13,26 +13,31 @@
   "author": "",
   "license": "ISC",
   "husky": {
-      "hooks": {
-          "pre-commit": "lint-staged"
-      }
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-      "*.{js,ts,tsx}": [
-          "eslint --fix"
-      ]
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/node": "^14.14.14",
     "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^4.10.0",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.3.0",
-    "prettier": "^2.2.1",
     "husky": "^4.3.6",
-    "lint-staged": "^10.5.3"
+    "lint-staged": "^10.5.3",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "typescript": "^4.1.3"
   }
 }
