@@ -1,8 +1,17 @@
+import dotenv from 'dotenv';
 import express from 'express';
+
+// initialize configuration
+dotenv.config();
+
 // rest of the code remains same
+const port = process.env.SERVER_PORT;
 const app = express();
-const PORT = 8000;
+
+// define a route handler for the default home page
 app.get('/', (req, res) => res.send('Express + TypeScript Server'));
-app.listen(PORT, () => {
-    console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
+
+// start the express server
+app.listen(port, () => {
+    console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
 });
