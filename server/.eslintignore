@@ -1,1 +1,9 @@
 node_modules
+package.json
+package-lock.json
+tsconfig.json
+yarn.lock
+build
+.eslintrc.js
+.gitignore
+.prettierrc.js
