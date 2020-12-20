@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/*",
-    "build": "tsc --project ./src/.",
+    "start": "nodemon ./src/index.ts",
+    "build": "tsc -b",
     "precommit": "lint-staged",
-    "lint": "eslint '*/**/*.{js,ts}' --quiet --fix"
+    "lint": "eslint 'src/**/*.{js,ts}' --quiet --fix"
   },
   "keywords": [],
   "author": "",
