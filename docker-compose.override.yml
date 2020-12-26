@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+    express:
+        image: "node:current"
+        working_dir: /usr/app/server
+        volumes:
+          - ./server:/usr/app/server
+        command: "npm start"

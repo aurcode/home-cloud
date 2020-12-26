@@ -2,6 +2,8 @@ FROM node:current
 
 WORKDIR /usr/app/server
 
+RUN npm install pm2 -g
+
 COPY ["package.json", "package-lock.json", "/usr/app/server/"]
 
 RUN npm install
@@ -16,4 +18,4 @@ WORKDIR ./build
 
 EXPOSE 5000
 
-CMD ["node", "src/index.js"]
+CMD [ "pm2-runtime", "start","src/index.js"]
