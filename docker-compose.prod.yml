@@ -1,6 +1,11 @@
 version: '3.8'
 
 services:
+    react:
+      build: ./client
+      ports:
+        - "8080:3000"
+
     express:
         build: ./server
         ports:

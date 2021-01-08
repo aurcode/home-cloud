@@ -5,7 +5,7 @@
 .eslintignore
 .eslintrc.js
 .prettierrc.js
-build/*
+dist/*
 Dockerfile
 node_modules
 npm-debug.log*

@@ -1,6 +1,13 @@
 version: '3.8'
 
 services:
+    react:
+      image: "node:current"
+      working_dir: /usr/app/client
+      volumes:
+        - ./client:/usr/app/client
+      command: "npm start"
+
     express:
         image: "node:current"
         working_dir: /usr/app/server
